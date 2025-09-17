@@ -14,6 +14,6 @@ ingress:
   host: awsviewer.com   
 
 aws:
-  accessKeyId: AKIA4BXDEJAAMOKWRBWY
-  secretAccessKey: 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
-  region: us-east-1
+  accessKeyId: AWS_ACCESS_KEY_ID
+  secretAccessKey: AWS_SECRET_ACCESS_KEY
+  region: AWS_DEFAULT_REGION
