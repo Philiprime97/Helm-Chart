@@ -1,0 +1,19 @@
+deployment:
+  replicaset: 2
+  imagename: philiprime97/awsviewer
+  imagetag: v1
+
+service:
+  # type: ClusterIP
+  port: 80
+  targetport: 5001
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  host: awsviewer.com   
+
+aws:
+  accessKeyId: AKIA4BXDEJAAMOKWRBWY
+  secretAccessKey: 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
+  region: us-east-1
