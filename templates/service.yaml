@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     {{- include "app.labels" . | nindent 4 }}
-  type: type: {{ .Values.service.type | default "ClusterIP" }}
+  type: {{ .Values.service.type | default "ClusterIP" }}
   ports:
     - name: http
       protocol: TCP
