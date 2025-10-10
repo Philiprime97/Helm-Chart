@@ -4,7 +4,7 @@ deployment:
   imagetag: v1
 
 service:
-  # type: ClusterIP
+  type: NodePort
   port: 80
   targetport: 5001
 
