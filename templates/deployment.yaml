@@ -20,11 +20,20 @@ spec:
           ports:
             - containerPort: {{ .Values.service.targetport }}
           env:
-            - name: AWS_ACCESS_KEY_ID
-              value: "{{ .Values.aws.accessKeyId }}"
-            - name: AWS_SECRET_ACCESS_KEY
-              value: "{{ .Values.aws.secretAccessKey }}"
-            - name: AWS_REGION
-              value: "{{ .Values.aws.region }}"
-            - name: AWS_DEFAULT_REGION
-              value: "{{ .Values.aws.region }}"
+            env:
+              {{- if .Values.aws.accessKeyId }}
+              - name: AWS_ACCESS_KEY_ID
+                value: "{{ .Values.aws.accessKeyId }}"
+              {{- end }}
+              
+              {{- if .Values.aws.secretAccessKey }}
+              - name: AWS_SECRET_ACCESS_KEY
+                value: "{{ .Values.aws.secretAccessKey }}"
+              {{- end }}
+              
+              {{- if .Values.aws.region }}
+              - name: AWS_REGION
+                value: "{{ .Values.aws.region }}"
+              - name: AWS_DEFAULT_REGION
+                value: "{{ .Values.aws.region }}"
+              {{- end }}
