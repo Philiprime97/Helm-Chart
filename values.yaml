@@ -1,5 +1,5 @@
 deployment:
-  replicaset: 2
+  replicaset: 4
   imagename: philiprime97/awsviewer
   imagetag: v1
 
