@@ -6,9 +6,8 @@ spec:
   selector:
     {{- include "app.labels" . | nindent 4 }}
   type: type: {{ .Values.service.type | default "ClusterIP" }}
-  ports:  #from values
   ports:
-  - name: http
-    protocol: TCP
-    port: {{ .Values.service.port }}
-    targetPort: {{ .Values.service.targetport }}
+    - name: http
+      protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetport }}
