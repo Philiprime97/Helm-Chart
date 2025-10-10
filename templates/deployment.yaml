@@ -20,8 +20,7 @@ spec:
           ports:
             - containerPort: {{ .Values.service.targetport }}
           env:
-            env:
-              {{- if .Values.aws.accessKeyId }}
+            {{- if .Values.aws.accessKeyId }}
               - name: AWS_ACCESS_KEY_ID
                 value: "{{ .Values.aws.accessKeyId }}"
               {{- end }}
