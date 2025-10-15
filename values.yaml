@@ -1,7 +1,11 @@
 deployment:
   replicaset: 4
-  imagename: philiprime97/awsviewer
-  imagetag: v1
+  #pulling from harbor:
+  imagename: 192.168.1.179/devops/myapp
+  imagetag: 1
+  #pulling from git: 
+  #imagename: philiprime97/awsviewer
+  #imagetag: v1
 
 service:
   type: NodePort
