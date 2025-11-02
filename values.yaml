@@ -23,3 +23,11 @@ aws:
   accessKeyId: ""
   secretAccessKey: ""
   region: "us-east-1"
+
+
+podMonitor:
+  enabled: true
+  port: http
+  path: /metrics
+  interval: 30s
+  release: prometheus 
