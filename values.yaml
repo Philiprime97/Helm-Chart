@@ -26,7 +26,6 @@ aws:
 
 
 podMonitor:
-  enabled: true
   port: http
   path: /metrics
   interval: 30s
