@@ -18,7 +18,8 @@ spec:
         - name: {{ .Release.Name }}
           image: {{ .Values.deployment.imagename }}:{{ .Values.deployment.imagetag }}
           ports:
-            - containerPort: {{ .Values.service.targetport }}
+            - name: http
+              containerPort: {{ .Values.service.targetport }}
           env:
             {{- if .Values.aws.accessKeyId }}
               - name: AWS_ACCESS_KEY_ID
