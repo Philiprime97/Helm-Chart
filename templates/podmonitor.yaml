@@ -1,7 +1,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PodMonitor
 metadata:
-  name: {{ include "app.fullname" . }}-podmonitor
+  name: {{ include "app.labels" . }}-podmonitor
   labels:
     release: {{ .Values.podMonitor.release }}
 spec:
